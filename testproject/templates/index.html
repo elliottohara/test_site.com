@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block featured_slider %}
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="featured_slide">
+    <div class="featured_box">
+      <!--
+        <div class="floater">
+        <h2>1. Aliquatjusto quisque nam</h2>
+        <p>Orcimagna rhoncus et a nec antesque sed temportor pellus nibh conseque. Accumstsemper wisi pretium feugiat non ut eleifendrerisque at et condisse sce.</p>
+      </div>
+      <p class="readmore"><a href="#">Continue Reading &raquo;</a></p> -->
+      <img src="{% static "img/ltjjclogo.png" %}" alt="" /> </div>
+  </div>
+</div>
+{% endblock %}
+{% block content %}
+<div id="topstory">
+        <h2>Welcome to Lake Travis Jiu-Jitsu Club</h2>
+        <ul>
+            <li><img src="http://d9nmkm9u8we5o.cloudfront.net/s/img/elliottcarloswilliam.jpg" alt="" />
+                    <p>
+                        Spicewood BJJ is a proud member of the Vandry Brazilian Jiu-Jitsu Affiliation.
+                    </p>
+                     <p>Head instructor <a href="{% url "staff_detail" 'ed_aiken' %}">Ed Aiken</a> and Owner Elliott O&apos;Hara have been training under 4th Degree Black Belt
+                         William Vandry for over 5 years each.</p>
+                    <p class="readmore"><a href="/about/">Continue Reading &raquo;</a></p>
+                  </li>
+            <li><img src="http://d9nmkm9u8we5o.cloudfront.net/s/img/e_n_b.jpg" alt="" />
+                <p>Come try a free class today!</p>
+          </li>
+          <li class="last"><img src="http://d9nmkm9u8we5o.cloudfront.net/s/img/parker_bow_and_arrow.jpg" alt="" />
+            <p>Brazilian Jiu-Jitsu is an wonderful sport for children. It
+                gives them amazing self confidence, and instills a level
+                of respect for self and others that is hard to duplicate.
+            </p>
+              <p class="readmore">
+                    <a href="{% url "children" %}">Continue Reading &raquo;</a>
+              </p>
+          </li>
+
+        </ul>
+        <br class="clear" />
+</div>
+{% endblock %}
