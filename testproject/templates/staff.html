@@ -5,7 +5,7 @@
     {% for staff_member in staff %}
         <li>
             <a href="staff/{{ staff_member.url }}">
-            <img class="imgl" width="100px" src="{% static "img/staff/list/"%}{{ staff_member.url }}.jpg" alt="{{ staff_member.name }}, BJJ instructor" />
+            <img class="imgl" width="100px" src="{{ member.bio_image.url }}" alt="{{ staff_member.name }}, BJJ instructor" />
             </a>
             <br class="clear" />
             <a href="staff/{{ staff_member.url }}">{{ staff_member.name }}</a>
