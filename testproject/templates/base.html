@@ -102,7 +102,7 @@
 
       <img class="imgl" src="{% static "img/gold.jpg"%}" alt="" />
       <p>LTJJC is dedicated to spreading the knowledge and love
-        of Brazilian Jiu-Jitsu to the Spicewood, Texas area.
+        of Brazilian Jiu-Jitsu to the Bee Cave, Texas area.
       </p>
     </div>
     <div class="box contactdetails">
@@ -115,8 +115,8 @@
         <li>Tel: (512) 763-0684</li>
         <li>Email: spicewoodbjj@gmail.com</li>
         <li class="last">
-           <a href="http://www.facebook.com/oharabjj"><img style="display: inline" src="http://static.viewbook.com/images/social_icons/facebook_32.png" /></a>
-           <a href="https://twitter.com/spicewoodbjj"><img style="display: inline" src="http://static.viewbook.com/images/social_icons/twitter_32.png" /></a>
+           <a href="http://www.facebook.com/laketravisbjj"><img style="display: inline" src="http://static.viewbook.com/images/social_icons/facebook_32.png" /></a>
+           <a href="https://twitter.com/laketravisbjj"><img style="display: inline" src="http://static.viewbook.com/images/social_icons/twitter_32.png" /></a>
         </li>
       </ul>
     </div>
@@ -135,14 +135,16 @@
 <!-- ####################################################################################################### -->
 <div class="wrapper col5">
   <div id="copyright">
-      <div class="fb-like" data-href="http://www.spicewoodbjj.com" data-width="450" data-colorscheme="dark" data-show-faces="true" data-send="true"></div>
+      <div class="fb-like" data-href="http://www.ltjjc.com" data-width="450" data-colorscheme="dark" data-show-faces="true" data-send="true"></div>
       <p class="fl_left">Copyright &copy; 2013 - All Rights Reserved - <a href="#">ltjjc.com</a></p>
       <br class="clear" />
   </div>
 </div>
 <script type="text/javascript">
     function loadAlbums(){
-        FB.api('/204018879774411/photos',  function(resp) {
+        //FB.api('/204018879774411/photos',  function(resp) {
+        FB.api('/465588603545855/photos',  function(resp) {
+            //465588603545855
                         //Log.info('Albums', resp);
                         var ul = document.getElementById('fb_pictures');
                         var images = resp.data;
