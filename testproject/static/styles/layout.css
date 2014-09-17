@@ -126,14 +126,17 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 	display:block;
 	float:left;
 	margin-top:7px;
+    padding-left: 111px;
+    height: 85px;
 	overflow:hidden;
-	}
+    background: url('../img/logo_small.png') no-repeat top left;
+    }
 
 #header #logo h1 a{
-	font-size:30px;
+	font-size:20px;
 	color:#999999;
 	background-color:#000000;
-	}
+   	}
 
 #header h1 strong{
 	font-weight:normal;
