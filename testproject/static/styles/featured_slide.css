@@ -16,7 +16,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 	font-size:13px;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	color:#FFFFFF;
-	background:url("/s/img/trans_top.png") top left no-repeat #E3E5E5;
+	background:url("../img/trans_top.png") top left no-repeat #E3E5E5;
 	}
 
 #featured_slide a, #featured_slide ul, #featured_slide img, #featured_slide p{
@@ -62,7 +62,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 	margin:0 0 0 30px;
 	padding:3px 5px;
 	overflow:hidden;
-	background:url("../images/fs_txt_trans_bg.png");
+	background:url("../img/fs_txt_trans_bg.png");
 	}
 
 #featured_slide p.readmore{
@@ -74,7 +74,7 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 
 #featured_slide p.readmore a{
 	color:#f7d04f;
-	background:url("../images/fs_txt_trans_bg.png");
+	background:url("../img/fs_txt_trans_bg.png");
 	padding:25px;
 	}
 
@@ -106,7 +106,7 @@ HTML Output:
 	height:44px;
 	text-align:center;
 	color:#666666;
-	background:url("../images/trans.png") #E3E5E5;
+	background:url("../img/trans.png") #E3E5E5;
 	z-index:1000;
 	}
 
@@ -137,9 +137,9 @@ HTML Output:
 	outline:none;
 	text-indent:-5000px;
 	text-decoration:none;
-	background:url("../images/slide.png") 50% 50% no-repeat;
+	background:url("../img/slide.png") 50% 50% no-repeat;
 	}
 
 #fsn .activeSlide{
-	background:url("../images/slide.png") 0% 50% no-repeat;
+	background:url("../img/slide.png") 0% 50% no-repeat;
 	}
