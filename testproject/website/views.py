@@ -63,3 +63,7 @@ def dictfetchall(cursor):
 
 def children(request):
     return render_to_response('children.html')
+
+
+def media(request):
+    return render_to_response('media.html')

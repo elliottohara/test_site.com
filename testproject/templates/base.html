@@ -53,10 +53,10 @@
   <div id="header">
     <div id="topnav">
       <ul>
-        <li><a href="{% url "classes"%}">Classes</a><span>Class Schedule</span></li>
-        <li><a href="{% static 'ltjjcEnrollment.pdf' %}">Enrollment Form</a><span>Save time! Fill it out at home.</span></li>
-        <li><a href="{% url 'about' %}">About<span>About LTJJC</span></a></li>
-        <li><a href="{% url 'staff' %}">Staff<span>The LTJJC Staff</span></a></li>
+        <li><a href="{% url "classes"%}">Classes</a><span>class schedule</span></li>
+        <li><a href="{% url 'media' %}">Media</a><span>our media vault</span></li>
+        <li><a href="{% url 'about' %}">About<span>about LTJJC</span></a></li>
+        <li><a href="{% url 'staff' %}">Staff<span>the LTJJC staff</span></a></li>
       </ul>
     </div>
     <div id="logo">
@@ -117,7 +117,7 @@
         <li>Email: contact@ltjjc.com</li>
         <li class="last">
            <a href="http://www.facebook.com/laketravisbjj"><img style="display: inline" src="http://static.viewbook.com/images/social_icons/facebook_32.png" /></a>
-           <a href="https://twitter.com/laketravisbjj"><img style="display: inline" src="http://static.viewbook.com/images/social_icons/twitter_32.png" /></a>
+           <a href="https://twitter.com/ltjjc"><img style="display: inline" src="http://static.viewbook.com/images/social_icons/twitter_32.png" /></a>
         </li>
       </ul>
     </div>
@@ -144,7 +144,7 @@
 <script type="text/javascript">
     function loadAlbums(){
         //FB.api('/204018879774411/photos',  function(resp) {
-        FB.api('/465588603545855/photos',  function(resp) {
+        FB.api('/442058485898867/photos',  function(resp) {
             //465588603545855
                         //Log.info('Albums', resp);
                         var ul = document.getElementById('fb_pictures');
