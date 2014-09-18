@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block content %}
-<ul style="list-style: none">
+<h1>Staff</h1>
+<p>Lake Travis Brazillian Jiu-Jitsu Club has some of the finest Brazilian Jiu-Jitsu, Mixed Martial Arts, and Fitness
+instructors in the Lakeway, Bee Caves and Spicewood area.</p>
+<ul id="staff">
     {% for staff_member in staff %}
         <li>
             <a href="staff/{{ staff_member.url }}">
-            <img class="imgl" width="100px" src="{{ staff_member.bio_image.url }}" alt="{{ staff_member.name }}, BJJ instructor" />
+            <span>{{ staff_member.name }}</span><span>{{ staff_member.title }}</span>
+            <img class="imgl" src="{{ staff_member.bio_image.url }}" alt="{{ staff_member.name }}, BJJ instructor" />
             </a>
-            <br class="clear" />
-            <a href="staff/{{ staff_member.url }}">{{ staff_member.name }}, {{ staff_member.title }}</a>
         </li>
     {% endfor %}
 </ul>

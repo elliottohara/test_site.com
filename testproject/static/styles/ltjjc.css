@@ -1,0 +1,24 @@
+#staff{
+    list-style:none;
+    padding:0;
+}
+#staff li{
+    float: left;
+    width:120px;
+    margin:7px;
+
+}
+#staff li span{
+    display: block;
+    text-align: center;
+    margin:0 auto;
+}
+#staff li img{
+    width:120px;
+}
+#large_action{
+    margin:0 auto;
+}
+#small_action li{
+    height:70px;
+}
