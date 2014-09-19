@@ -20,11 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '69xb8z0^3092k=un4)6$=y_1a*lyul0$&7$5u)!y#*%9mux%^#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+ALLOWED_HOSTS = ['ltjjc.com', '127.0.0.1']
+DEBUG = False
 
-TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+#TEMPLATE_DEBUG = True
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -36,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'shrink',
+    'precompressed',
     'website',
 
 )
@@ -48,6 +52,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.contrib.staticfiles',
     'htmlmin.middleware.HtmlMinifyMiddleware',
     'htmlmin.middleware.MarkRequestMiddleware',
 )
@@ -84,12 +89,17 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+
 STATICFILES_DIRS = (
     BASE_DIR + '/static/',
 )
 
+#GZIP stuff
+STATICFILES_STORAGE = 'precompressed.storage.s3boto.PrecompressedS3BotoStorage'
+
 MEDIA_ROOT = BASE_DIR + '/media/'
 MEDIA_URL = '/media/'
+
 
 
 
