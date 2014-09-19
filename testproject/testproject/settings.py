@@ -52,6 +52,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'testproject.urls'
 
 WSGI_APPLICATION = 'testproject.wsgi.application'
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
