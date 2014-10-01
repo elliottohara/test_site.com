@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shrink',
-    'precompressed',
+    #'precompressed',
     'website',
 
 )
@@ -78,29 +78,5 @@ USE_TZ = True
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR,  'templates'),
 )
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-STATIC_URL = '/static/'
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
-)
-
-STATICFILES_DIRS = (
-    BASE_DIR + '/static/',
-)
-
-#GZIP stuff
-STATICFILES_STORAGE = 'precompressed.storage.s3boto.PrecompressedS3BotoStorage'
-
-MEDIA_ROOT = BASE_DIR + '/media/'
-MEDIA_URL = '/media/'
-
-
-
 
 from local_settings import *
