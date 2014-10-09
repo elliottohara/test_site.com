@@ -67,3 +67,7 @@ def children(request):
 
 def media(request):
     return render_to_response('media.html')
+
+
+def account(request):
+    return render_to_response('account.html')

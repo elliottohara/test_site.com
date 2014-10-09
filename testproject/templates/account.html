@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Payments</h2>
+<p>To set your tuition payments up, please click the appropriate Pay Now button. This will set up a re-occuring payment
+on the 1st of each month through paypal. To cancel your tuition, you can stop the re-occuring payment through paypal
+or you can email us at <a href="mailto:laketravisjjc@gmail.com">laketravisjjc@gmail.com</a> and we'll stop it for you.
+</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="35AXJA8ZV4GWE">
+<p><b>Adult Tuition:</b>$125 billed monthly on the 1st of each month.</p>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="6NRTF3SP4JSC8">
+<p><b>Children's Tuition:</b> $100 billed monthly on the 1st of each month.</p>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HWMRNMFHUCB3G">
+<p><b>Registration:</b>One time registration fee of $100. This includes the cost of your GI. Please see the LTJJC staff
+to receive your GI.</p><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+{% endblock %}
