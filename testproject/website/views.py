@@ -61,6 +61,9 @@ def dictfetchall(cursor):
     ]
 
 
+def generic(request, view_name):
+    return render_to_response("%s.html" % view_name)
+
 def children(request):
     return render_to_response('children.html')
 
@@ -71,3 +74,7 @@ def media(request):
 
 def account(request):
     return render_to_response('account.html')
+
+
+def merchandise(request):
+    return render_to_response('merchandise.html')

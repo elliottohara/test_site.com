@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <h1>LTJJC Merchandise</h1>
+    <img class="imgl" src="{% static 'img/william.jpg' %}" width="150px" />
+    <p>Show your LTJJC Pride! Purchase our merchandise! All merchandise is available on location. </p>
+    <br class="clear" />
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="fl_left" style="width:30%;">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="LVAMBUHGHBG42">
+<h4>T-Shirt ($15)</h4>
+ <input type="hidden" name="on0" value="Size">Size:
+    <select name="os0">
+	<option value="Child Small">Child Small </option>
+	<option value="Child Medium">Child Medium </option>
+	<option value="Adult Small">Adult Small </option>
+	<option value="Adult Medium">Adult Medium </option>
+	<option value="Adult Large">Adult Large </option>
+	<option value="Adult X-Large">Adult X-Large </option>
+</select>
+<br />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="fl_left" style="width:30%;">
+<h4>12" Gi Patches ($10)</h4>
+<p style="margin:0;padding:.03em;">Gi Patch for back</p>
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="9YQCG5YXY6HCA">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<br />
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="fl_left" style="width:30%;">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="Y2AD7QEPFH36N">
+<input type="hidden" name="on0" value="Size">
+    <h4>LTJJC Gi ($65)</h4>
+    Size:<select name="os0">
+    <option value="M1">M1 </option>
+	<option value="M2">M2 </option>
+	<option value="M3">M3 </option>
+	<option value="A1">A1 </option>
+	<option value="A2">A2 </option>
+	<option value="A3">A3 </option>
+	<option value="A4">A4 </option>
+	<option value="A5">A5 </option>
+</select>
+<br />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+{% endblock %}
