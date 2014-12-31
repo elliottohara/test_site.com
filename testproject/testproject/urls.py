@@ -23,7 +23,7 @@ urlpatterns = patterns('',
     url(r'^children$', 'website.views.children', name='children'),
     url(r'^media$', 'website.views.media', name='media'),
     url(r'^account$','website.views.account', name='account'),
-    url(r'^merchandise', 'website.views.merchandise', name='generic'),
+    url(r'^merchandise', 'website.views.merchandise', name='merchandise'),
 )
 urlpatterns += staticfiles_urlpatterns()
 '''urlpatterns += patterns('', (r'^media/(?P<path>.*)$', 'django.views.static.serve',
