@@ -1,7 +1,28 @@
 {% extends "base.html" %}
+{% block head %}
+<style type="text/css">
+
+    #schedule tbody tr{
+        height: 75px;
+    }
+    .kickboxing{
+        background: #d3222d;
+    }
+    .adultbjj{
+        background: #999999;
+    }
+    .kidsbjj{
+        background: #0ac8c1;
+    }
+    .MMA{
+        background: #000;
+        color:#FFF;
+    }
+</style>
+{% endblock %}
 {% block content %}
 <h1>Class Schedule</h1>
-<table style="width:100%">
+<table style="width:100%" id="schedule">
     <thead>
         <tr>
             <th>Time</th><th>SU</th><th>MO</th><th>TU</th><th>WE</th><th>TH</th><th>FR</th><th>SA</th>
@@ -9,23 +30,24 @@
     </thead>
     <tbody>
         <tr>
-            <th>8:30am</th><td colspan="7" style="text-align: center">Private Lessons</td>
+            <th>11:00am</th><td></td><td class="kickboxing">Cardio-Kickboxing</td><td></td><td class="kickboxing">Cardio-Kickboxing</td><td></td><td></td><td></td>
         </tr>
         <tr>
-            <th>4:30pm</th><td></td><td></td><td class="kids10-14bjj">Kid's BJJ</td><td></td><td class="kids10-14bjj">Kids BJJ</td><td></td><td></td>
+            <th>12:00am</th><td colspan="7" style="text-align: center">Private Lessons (call for details)</td>
         </tr>
         <tr>
-            <th>5:30pm</th><td></td><td class="adultbjj">Adult BJJ</td><td class="adultbjj">Adult BJJ</td><td class="adultbjj">Adult BJJ</td><td class="MMA" rowspan="2">MMA - All Ages</td><td></td><td></td>
+            <th>4:30pm</th><td></td><td></td><td class="kidsbjj">Kid's BJJ</td><td></td><td class="kidsbjj">Kids BJJ</td><td></td><td></td>
         </tr>
         <tr>
-            <th>6:30pm</th><td></td><td rowspan="2" class="adultmma">Mixed Martial Arts</td><td rowspan="2">Open Mat</td><td rowspan="2" class="adultbjj">Open Mat</td><td></td><td></td>
+            <th>5:30pm</th><td></td><td class="adultbjj">Adult BJJ</td><td class="adultbjj">Adult BJJ</td><td class="adultbjj">Adult BJJ</td><td class="MMA">MMA - All Ages</td><td></td><td></td>
         </tr>
         <tr>
-            <th>7:30pm</th><td></td><td></td><td></td><td></td>
+            <th>6:30pm</th><td></td><td class="MMA">Mixed Martial Arts</td><td class="kickboxing">Kickboxing</td><td class="adultbjj">Open Mat</td><td class="kickboxing">Kickboxing</td><td></td><td></td>
         </tr>
         <tr>
-            <th>8:00pm</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <th>7:30pm</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
         </tr>
+
     </tbody>
 </table>
 

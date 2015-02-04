@@ -13,6 +13,7 @@
 <script type="text/javascript" src="{%  static 'scripts/jquery.cycle.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'scripts/jquery.cycle.setup.js'%} "></script>
 <link rel="SHORTCUT ICON" HREF="{% static 'img/favicon.ico' %}">
+{% block head %}{% endblock %}
 </head>
 <body id="top">
 <div id="fb-root"></div>
@@ -174,7 +175,7 @@
                         ul.innerHTML += "<div class='fix'></div>";
                     });
 
-         FB.api('/603640116407369/photos',  function(resp) {
+         FB.api('/441902852581097/photos',  function(resp) {
              var ul = document.getElementById('small_action');
              var images = resp.data;
              if (!images) {
