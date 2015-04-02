@@ -39,8 +39,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shrink',
-    #'precompressed',
     'website',
+    'easy_thumbnails',
+    'image_cropping',
 
 )
 
@@ -80,3 +81,10 @@ TEMPLATE_DIRS = (
 )
 
 from local_settings import *
+
+from easy_thumbnails.conf import Settings as thumbnail_settings
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
+THUMBNAIL_DEBUG = True
+THUMBNAIL_DEFAULT_STORAGE = 'storages.backends.s3boto.S3BotoStorage'

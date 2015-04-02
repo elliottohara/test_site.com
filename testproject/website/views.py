@@ -1,17 +1,18 @@
 from django.db import connection
 from django.shortcuts import render, render_to_response, get_object_or_404
 # Create your views here.
+from django.views.generic import DetailView
 import requests
-from website.models import Staff, Class
+from website.models import Staff, Class, SimplePage
 
 
 def index(request):
     return render_to_response('index.html')
 
-
+'''
 def about(request):
     return render_to_response('about.html')
-
+'''
 
 def test(request):
     return render_to_response('test.html')
@@ -78,3 +79,8 @@ def account(request):
 
 def merchandise(request):
     return render_to_response('merchandise.html')
+
+
+class SimplePageView(DetailView):
+    def get_object(self, queryset=None):
+        return get_object_or_404(SimplePage, url=self.args[0])

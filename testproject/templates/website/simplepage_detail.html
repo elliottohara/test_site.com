@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load cropping %}
+{% block content %}
+    <img class="imgl" src="{% cropped_thumbnail simplepage 'cropped' width=200%}" width="200px" />
+    <h1>{{ simplepage.header_text }}</h1>
+    {{ simplepage.body | linebreaks }}
+{% endblock %}

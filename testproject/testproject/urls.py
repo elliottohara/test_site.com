@@ -4,7 +4,9 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.templatetags.static import static
 import testproject
+from testproject.settings import BASE_DIR
 import website
+from website.views import SimplePageView
 
 admin.autodiscover()
 
@@ -15,7 +17,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'website.views.index', name='home'),
-    url(r'^about$', 'website.views.about', name='about'),
+    #url(r'^about$', 'website.views.about', name='about'),
     url(r'^t$', 'website.views.test', name='test'),
     url(r'^classes$', 'website.views.classes', name='classes'),
     url(r'^staff$', 'website.views.staff', name="staff"),
@@ -24,8 +26,14 @@ urlpatterns = patterns('',
     url(r'^media$', 'website.views.media', name='media'),
     url(r'^account$','website.views.account', name='account'),
     url(r'^merchandise', 'website.views.merchandise', name='merchandise'),
+    url(r'^(.+)/', SimplePageView.as_view(), name='simplepage')
 )
+'''
 urlpatterns += staticfiles_urlpatterns()
-'''urlpatterns += patterns('', (r'^media/(?P<path>.*)$', 'django.views.static.serve',
-                             {'document_root': testproject.settings.MEDIA_ROOT}))
+
+urlpatterns += patterns('', (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+                             {'document_root': BASE_DIR+'/static/'}))
+
+urlpatterns += patterns('', (r'^media/(?P<path>.*)$', 'django.views.static.serve',
+                             {'document_root': BASE_DIR+'/media/'}))
 '''
