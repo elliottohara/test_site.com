@@ -1,24 +1,24 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-
+{% load cropping %}
 {% block featured_slider %}
 <!-- ####################################################################################################### -->
 <div class="wrapper col2">
   <div id="featured_slide">
-    <div class="featured_box">
-        <div class="floater">
-            <h2>Kids Classes</h2>
-            <p>BJJ for kids.</p>
-       </div>
-      <p class="readmore"><a href="{% url 'simplepage' 'children' %}">Continue Reading &raquo;</a></p>
-      <img src="{% static "img/kids_nogi.jpg" %}" alt="" /> </div>
-    <div class="featured_box">
-        <div class="floater">
-            <h2>Adult Brazilian Jiu-Jitsu</h2>
-            <p>Top level BJJ instruction in the Bee Cave, Lakeway area.</p>
-       </div>
-      <p class="readmore"><a href="{% url 'simplepage' 'about' %}">Continue Reading &raquo;</a></p>
-      <img src="{% static "img/elliott_sparring_front.jpg" %}" alt="" /> </div>
+      {% for slide in slides  %}
+          <div class="featured_box">
+            {% if slide.header %}
+            <div class="floater">
+                <h2>{{ slide.header }}</h2>
+                <p>{{ slide.subtext }}</p>
+            </div>
+            {% endif %}
+            {% if slide.navigate_to %}
+            <p class="readmore"><a href="{{ slide.navigate_to }}">Continue reading &raquo;</a></p>
+            {% endif %}
+            <img src="{% cropped_thumbnail slide 'cropped' width=965%}" alt="{{ slide.header }}" />
+          </div>
+      {% endfor %}
   </div>
 </div>
 {% endblock %}

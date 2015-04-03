@@ -51,8 +51,8 @@ class FontPageSlide(models.Model):
                                                                                   "\"continue reading\" sign. "
                                                                                   "Can be blank")
     image = models.ImageField(upload_to='slide')
-    cropped = ImageRatioField('image', '900x600')
+    cropped = ImageRatioField('image', '930x375')
+    sort_order = models.IntegerField(default=500)
 
-    class Meta:
-        def __unicode__(self):
-            return self.header
+    def __unicode__(self):
+         return self.header
