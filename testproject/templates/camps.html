@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block content %}
-    <img class="imgl" src="{% static 'img/natalie.jpg' %}" width="200px" />
+
     <h1>Summer Camps</h1>
     <p>Lake Travis Jiu Jitsu Club is proud to announce its summer camp schedule.</p>
-    <div>
+    <div><img class="imgl" src="{% static 'img/natalie.jpg' %}" width="200px" />
         <h3>Kids Martial Arts Fun Camp</h3>
+         <strong>
+            Camp 1: June 15th - June 18th<br />
+            Camp 2: Jun 29th - July 2nd
+        </strong>
         <p>Our Martial Arts Fun Camps are a drop off camp in which children are closely supervised by our highly qualified
         staff and taught basic martial arts skills in the form of easy to understand games. No martial arts experience
         is needed, just the desire to have a lot of fun!
@@ -14,15 +18,53 @@
         Each session costs $175. Both sessions can be purchased for $325. Current members of LTJJC also receive a 10%
         discount.
         </p>
-        <strong>
-            Camp 1: June 15th - June 18th<br />
-            Camp 2: Jun 29th - July 2nd
-        </strong>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="26T6QM4ZTXAJJ">
+<input type="hidden" name="on0" value="Sessions"><strong>Purchase Now!</strong><br /><select name="os0">
+	<option value="1 Session 1 Camp">1 Session 1 Camp $175.00 USD</option>
+	<option value="1 Session 1 Camp (LTJJC Member)">1 Session 1 Camp (LTJJC Member) $160.00 USD</option>
+	<option value="2 Sessions 1 Camp">2 Sessions 1 Camp $325.00 USD</option>
+	<option value="2 Sessions 1 Camp (LTJJC Member)">2 Sessions 1 Camp (LTJJC Member) $295.00 USD</option>
+	<option value="2 Sessions 2 Camps">2 Sessions 2 Camps $640.00 USD</option>
+	<option value="2 Sessions 2 Camps (LTJJC Member)">2 Sessions 2 Camps (LTJJC Member) $585.00 USD</option>
+</select>
+<input type="hidden" name="currency_code" value="USD">
+<br /><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
     </div>
-    <div>
+    <div style="margin-top: 1em;">
+    <img class="imgr" src="{% static 'img/heather.jpg' %}" width="200px" />
         <h3>Fitness Boot Camp</h3>
-        <p>Info coming soon.</p>
-        <strong>Camp dates: June 22nd - 25th </strong>
+        <strong>
+            Camp 1: June 8th - 10th
+            Camp 2: June 22nd - 24th
+        </strong>
+        <p>LTJJC's Fitness Boot Camp will be taught by Heather O'Hara, a former Radio city Rockette, who is also
+            certified as a personal trainer, allegro pilates and dance instructor.  She uses a combination of strength,
+            plyometrics, core, cardio, muscle endurance, flexibility and functional movement patterns to give you the
+            ultimate circuit workout.  You get EVERYTHING you need!  </p>
+        <p>We use jump ropes, medicine balls, boxing, yoga-pilates, core strengthening, upper-lower body exercises and
+            more! great for people show want that summer weight loss or athletes who want to increase agility,
+            balance and power.</p>
+            <em>We promise you, this camp won't disappoint.</em>
+        <p></p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="5QFYW53HTHKTE">
+<input type="hidden" name="on0" value="Sessions"><strong>Purchase Now</strong><br /><select name="os0">
+	<option value="Non Member">Non Member $125.00 USD</option>
+	<option value="Member">Member $110.00 USD</option>
+</select><br />
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
     </div>
 
 {% endblock %}
