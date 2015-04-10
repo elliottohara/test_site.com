@@ -56,3 +56,6 @@ class FontPageSlide(models.Model):
 
     def __unicode__(self):
         return self.header
+
+    class Meta:
+        ordering = ['sort_order']
