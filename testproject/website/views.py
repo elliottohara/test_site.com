@@ -50,3 +50,7 @@ def merchandise(request):
 class SimplePageView(DetailView):
     def get_object(self, queryset=None):
         return get_object_or_404(SimplePage, url=self.args[0])
+
+
+def camps(request):
+    return render_to_response('camps.html')

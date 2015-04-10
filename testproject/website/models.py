@@ -55,4 +55,4 @@ class FontPageSlide(models.Model):
     sort_order = models.IntegerField(default=500)
 
     def __unicode__(self):
-         return self.header
+        return self.header
