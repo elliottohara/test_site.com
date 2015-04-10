@@ -24,9 +24,9 @@ urlpatterns = patterns('',
     url(r'^media$', 'website.views.media', name='media'),
     url(r'^account$','website.views.account', name='account'),
     url(r'^merchandise', 'website.views.merchandise', name='merchandise'),
-    url(r'^camps$', 'website.views.camps', name='camps'),
+    url(r'^camps', 'website.views.camps', name='camps'),
     url(r'^(.+)/', SimplePageView.as_view(), name='simplepage'),
-    
+
 )
 '''
 urlpatterns += staticfiles_urlpatterns()
