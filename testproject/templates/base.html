@@ -19,23 +19,19 @@
 <div id="fb-root"></div>
 <script>
   window.fbAsyncInit = function() {
-    // init the FB JS SDK
     FB.init({
-      appId      : '458596850920584',                        // App ID from the app dashboard
-      channelUrl : 'http://www.ltjjc.com/channel.html', // Channel file for x-domain comms
-      status     : true,                                 // Check Facebook Login status
-      xfbml      : true                                  // Look for social plugins on the page
+      appId      : '458596850920584',
+      xfbml      : true,
+      version    : 'v2.4'
     });
     loadAlbums();
-    // Additional initialization code such as adding Event Listeners goes here
   };
 
-  // Load the SDK asynchronously
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/all.js";
+     js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
@@ -57,9 +53,7 @@
         <li><a href="{% url 'merchandise' %}">Merchandise<span>Show your pride!</span></a></li>
         <li><a href="{% url 'account' %}">Account</a><span>Pay your tuition online</span></li>
         <li><a href="{% url 'simplepage' 'about' %}">About<span>about LTJJC</span></a></li>
-        <li><a href="{% url "classes"%}">Classes</a><span>class schedule</span>
-        <ul><li><a href="{% url 'camps' %}">Camps<span>our summer camps</span></a></li></ul>
-        </li>
+        <li><a href="{% url "classes"%}">Classes</a><span>class schedule</span></li>
         <li><a href="{% url 'staff' %}">Staff<span>the LTJJC staff</span></a></li>
 
       </ul>
@@ -153,7 +147,7 @@
     //<![CDATA[
     function loadAlbums(){
         //FB.api('/204018879774411/photos',  function(resp) {
-        FB.api('/442058485898867/photos',  function(resp) {
+        FB.api('/442058485898867/photos?accesstoken=458596850920584|JjfTsgglD2DuMzwlG2Wf7sEbVyQ',  function(resp) {
             //465588603545855
                         //Log.info('Albums', resp);
                         var ul = document.getElementById('fb_pictures');
