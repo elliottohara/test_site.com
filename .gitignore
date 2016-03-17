@@ -2,3 +2,4 @@
 *.idea
 testproject/media/*
 testproject/testproject/local_settings.*
+testproject/db.sqlite3
