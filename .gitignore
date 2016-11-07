@@ -3,3 +3,5 @@
 testproject/media/*
 testproject/testproject/local_settings.*
 testproject/db.sqlite3
+.DS_STORE
+testproject/.DS_Store
