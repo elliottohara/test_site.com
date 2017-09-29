@@ -17,6 +17,33 @@
 </head>
 <body id="top">
 
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '458596850920584',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+    loadAlbums();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=458596850920584";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="wrapper col0">
   <div style="display: none;" id="topline">
     <ul>
@@ -126,5 +153,69 @@
       <br class="clear" />
   </div>
 </div>
+<script type="text/javascript">
+    //<![CDATA[
+    function loadAlbums(){
+        return;
+        //FB.api('/204018879774411/photos',  function(resp) {
+        FB.api('/442058485898867/photos?accesstoken=458596850920584|JjfTsgglD2DuMzwlG2Wf7sEbVyQ',  function(resp) {
+            //465588603545855
+                        //Log.info('Albums', resp);
+                        var ul = document.getElementById('fb_pictures');
+                        var images = resp.data;
+                        if(!images) {
+                            ul.innerHTML = "No images right now!";
+                        }
+                        var total = Math.min(6,images.length);
+                        for (var i=1;i <= total ; i++){
+                            var index = Math.floor((Math.random() * images.length));
+                            var image = images[index];
+                            var template = "<div id='{id}' class='flickr_badge_image'><a target='facebook' href='{link}'><img style='width:80px;' title='{title}' src='{image}' /></a></div>"
+
+                            var id = "flickr_badge_image" + i;
+                            var src = image.images[Math.max(0,image.images.length-2)].source;
+                            var link = image.link;
+                            var title = image.name;
+                            ul.innerHTML+= template.replace('{link}',link).replace('{image}',src)
+                                    .replace('{title}',title).replace('{id}',id);
+                            images.splice(index,1);
+                        }
+                        ul.innerHTML += "<div class='fix'></div>";
+                    });
+
+         FB.api('/441902852581097/photos',  function(resp) {
+             var ul = document.getElementById('small_action');
+             var images = resp.data;
+             if (!images) {
+                 ul.innerHTML = "No images right now!";
+             }
+             var total = Math.min(6, images.length);
+             for (var i = 1; i <= total; i++) {
+                 var index = Math.floor((Math.random() * images.length));
+                 var image = images[index];
+                 if(!image) continue;
+                 var template = "<li id='{id}' class='flickr_badge_image'><a target='facebook' href='{link}'><img style='width:80px;' title='{title}' src='{image}' /></a></li>"
+
+                 var id = "flickr_badge_image" + i * 5;
+                 var src = image.images[Math.max(0, image.images.length - 2)].source;
+                 var link = image.link;
+                 var title = image.name;
+                 ul.innerHTML += template.replace('{link}', link).replace('{image}', src)
+                         .replace('{title}', title).replace('{id}', id);
+                 images.splice(index, 1);
+             }
+             image = images[0];
+             if(!image) return;
+             //document.getElementById('large_action').src = image.images[Math.max(0,image.images.length-2)].source;
+             //alert(image.images[Math.max(0, image.images.length - 2)].source);
+             document.getElementById('large_action').src = image.images[Math.max(0, image.images.length - 2)].source;
+             //$('#large_action').attr(src,image.images[Math.max(0, image.images.length - 2)].source);
+         });
+
+
+
+    }
+    //]]>
+</script>
 </body>
 </html>
